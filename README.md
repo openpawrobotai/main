@@ -8,37 +8,39 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&width=900&lines=AI+Companion+Robot+for+Pets;Building+in+Public+%7C+100%25+Open+Source;ESP32+%2B+Computer+Vision+%2B+AI;Making+Pet+Companionship+Smarter;Join+the+Journey+%E2%86%92+Star+%26+Fork" alt="Typing SVG" />
 
-<!-- SOCIAL BADGES -->
-[![X](https://img.shields.io/badge/X-@OpenPawrobot-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/OpenPawrobot)
-[![Reddit](https://img.shields.io/badge/Reddit-u/OpenPawAI-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/user/OpenPawAI)
-[![Linktree](https://img.shields.io/badge/Linktree-openpawrobot-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/openpawrobot)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=github)](CONTRIBUTING.md)
+<div align="center">
+
+[![X](https://img.shields.io/badge/𝕏-Follow_OpenPawrobot-000000?style=for-the-badge)](https://x.com/OpenPawrobot)
+[![Reddit](https://img.shields.io/badge/Reddit-Join_Community-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/user/OpenPawAI)
+[![Linktree](https://img.shields.io/badge/🔗_Linktree-All_Links-39E09B?style=for-the-badge)](https://linktr.ee/openpawrobot)
+[![GitHub](https://img.shields.io/badge/GitHub-Open_Source-181717?style=for-the-badge&logo=github)](https://github.com/openpawrobot)
 
 </div>
 
 ---
+<!-- DEMO SECTION -->
 
-<!-- MISSION BANNER -->
-<div align="center">
+<h2 align="center">🚀 OpenPaw Final Video Cut</h2>
 
-### 🐾 An affordable AI-powered companion robot designed to keep pets engaged,<br>monitored, and connected — while their humans are away.
+<p align="center">
+  <a href="https://www.reddit.com/u/OpenPawAI/s/4BdC17TnOp">
+    <img src="./assets/openpaw-demo.gif" width="900" alt="OpenPaw Demo">
+  </a>
+</p>
 
-> 🚀 **Building In Public** • Every commit, failure, breakthrough, and prototype shared with the world.
+<p align="center">
+  An AI-powered companion robot designed to keep pets engaged, monitored, and connected while their humans are away.
+</p>
 
-</div>
+<p align="center">
+  🎬 <a href="https://youtu.be/kn2AgR_2DU8?si=tc3Vv8gAWHyQVW9I"><b>Watch Full Demo</b></a>
+</p>
+
+<p align="center">
+  🐾 Built in Public • 🤖 Robotics • 🧠 AI • ❤️ Pets
+</p>
 
 ---
-
-<!-- DEMO GIF SECTION -->
-<div align="center">
-<h2>🎥 See OpenPaw Final Video Cut</h2>
-
-[![OpenPaw Demo](./assets/openpaw-demo.gif)](https://www.reddit.com/u/OpenPawAI/s/4BdC17TnOp)
-
-> 🎬 *[Watch the full demo on Youtube →](https://youtu.be/kn2AgR_2DU8?si=tc3Vv8gAWHyQVW9I)*
-</div>
-
 ---
 
 <!-- WHY OPENPAW -->
@@ -87,40 +89,48 @@ OpenPaw is different.
 
 ---
 
-<!-- SYSTEM ARCHITECTURE -->
-## 🏗️ System Architecture
+## 🏗️ OpenPaw System Architecture
 
-```
-                         🐾 OpenPaw
-                              │
-       ┌──────────────────────┼──────────────────────┐
-       │                      │                      │
-       ▼                      ▼                      ▼
-  ⚡ Firmware           📱 Mobile App          🌐 Website
-    ESP32                 Flutter               Next.js
-       │
-       ▼
-  📡 Sensor Layer
-  ├── 📷 Camera (OV2640)
-  ├── 📏 Distance (HC-SR04)
-  ├── 🌡️ Temperature
-  ├── 🎤 Microphone
-  ├── 🔊 Speaker
-  └── ⚙️ Motion / Motors
-       │
-       ▼
-  🧠 AI Layer
-  ├── 👁️ Computer Vision
-  ├── 🐾 Behavior Analysis
-  ├── ❤️ Wellness Detection
-  ├── 🗣️ Voice Processing
-  └── 🤖 LLM Integration (Planned)
-       │
-       ▼
-  🎯 Companion Experience
+```text
+┌───────────────────────────────────────────────┐
+│                   🐾 OpenPaw                   │
+│          AI Companion Robot For Pets          │
+└───────────────────────────────────────────────┘
+                        │
+                        ▼
+
+┌───────────────────────────────────────────────┐
+│                ⚡ Core Firmware                │
+│                     ESP32                     │
+└───────────────────────────────────────────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+        ▼               ▼               ▼
+
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ 📡 Sensors  │ │ 🧠 AI Layer │ │ 🌐 Services │
+└─────────────┘ └─────────────┘ └─────────────┘
+
+│ 📷 Camera   │ │ 👁️ Vision   │ │ 📡 OTA      │
+│ 📏 Distance │ │ 🐾 Behavior │ │ ☁️ Cloud    │
+│ 🌡️ Temp     │ │ ❤️ Wellness │ │ 🔗 APIs     │
+│ 🎤 Mic      │ │ 🗣️ Speech   │ │ 🌍 Web      │
+│ 🔊 Speaker  │ │ 🤖 LLMs     │ │ 📱 Mobile   │
+│ ⚙️ Motors   │ └─────────────┘ └─────────────┘
+
+        └───────────────┬───────────────┘
+                        │
+                        ▼
+
+┌───────────────────────────────────────────────┐
+│            🎯 Companion Experience            │
+│                                               │
+│  🐾 Engagement  •  ❤️ Wellness Monitoring     │
+│  📱 Remote Access • 🤖 AI Interaction         │
+└───────────────────────────────────────────────┘
 ```
 
----
 
 <!-- TECH STACK -->
 ## 💻 Technology Stack
@@ -219,19 +229,32 @@ roles_needed:
 
 ---
 
-<!-- COMMUNITY -->
-## 🌎 Join The Community
+ <!-- COMMUNITY -->
+
+## 🌎 Join The OpenPaw Community
+
+<p align="center">
+Follow our journey as we build the future of AI-powered pet companionship in public.
+</p>
 
 <div align="center">
 
-[![X](https://img.shields.io/badge/Follow_on_X-@OpenPawrobot-000?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/OpenPawrobot)
-[![Reddit](https://img.shields.io/badge/Join_Reddit-OpenPawAI-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://reddit.com/user/OpenPawAI)
-[![Linktree](https://img.shields.io/badge/All_Links-Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/openpawrobot)
-[![YouTube](https://img.shields.io/badge/YouTube-OpenPaw-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@openpaw)
+[![X](https://img.shields.io/badge/𝕏-Follow_OpenPaw-black?style=for-the-badge)](https://x.com/OpenPawrobot)
+
+[![Reddit](https://img.shields.io/badge/Reddit-Join_Community-FF4500?style=for-the-badge\&logo=reddit\&logoColor=white)](https://reddit.com/user/OpenPawAI)
+
+[![YouTube](https://img.shields.io/badge/YouTube-Watch_Demos-FF0000?style=for-the-badge\&logo=youtube\&logoColor=white)](https://youtube.com/@openpaw)
+
+[![Linktree](https://img.shields.io/badge/🔗-All_Links-39E09B?style=for-the-badge)](https://linktr.ee/openpawrobot)
 
 </div>
 
+<p align="center">
+🐾 Development Updates • 🤖 Robotics • 🧠 AI • 🚀 Build In Public
+</p>
+
 ---
+
 
 
 
