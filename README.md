@@ -238,30 +238,64 @@ flowchart TD
 ---
 
 <!-- VERSIONS -->
-## 🤖 Hardware Version History
+## 🤖 The Journey — Three Generations of OpenPaw
 
-Three generations of the robot, each with full design files (Mechanical / Electrical / Firmware / Design / Docs):
+Built in public since **July 2025**: from a weekend replica of an open-source ball robot to a
+fully custom-engineered family companion. Every generation lives in its own repo with full
+design files (Mechanical / Electrical / Firmware / Design / Docs) **and** the complete
+development history with a list of known-missing files.
 
-| Version | What It Is | Repo |
-|:---|:---|:---|
-| **V1** | Spherical self-balancing ball-bot — ESP-ROLL replica (ESP32-CAM) | [openpaw-v1](https://github.com/openpawrobotai/openpaw-v1) |
-| **V2** | Custom rolling robot — own mechanicals + custom PCBA, 10-unit batch | [openpaw-v2](https://github.com/openpawrobotai/openpaw-v2) |
-| **V3** | Current generation — two-wheeled companion with expressive eyes, camera & sensors | [openpaw-v3](https://github.com/openpawrobotai/openpaw-v3) |
+### [V1 — ESP-ROLL Replica](https://github.com/openpawrobotai/openpaw-v1) · Jul–Sep 2025
+
+A spherical, self-balancing ball-bot with an ESP32 camera. We replicated the brilliant
+open-source **[ESP-ROLL](https://www.instructables.com/ESP-ROLL-Build-a-Spherical-Self-balancing-Robot-Wi/)**
+project end-to-end as the fastest path to a working AI-robot base, and rebuilt the OpenAI-QA
+firmware from scratch — voice transcription, image Q&A and spoken answers all running on the
+robot by September. One hand-built unit shipped. The upstream CAD couldn't be modified, which
+sparked the decision to engineer everything ourselves.
+
+### [V2 — Custom Rolling Robot](https://github.com/openpawrobotai/openpaw-v2) · Sep 2025–Jan 2026
+
+The same rolling-sphere concept, fully re-engineered in-house: from-scratch mechanical design
+and a custom PCBA (ESP32-Sense, camera, mic, speaker, laser, distance & temperature sensors).
+**Ten units were built, tested and shipped**, a dedicated sensor-verification firmware written,
+and a full documentation video series produced. The PawMe brand, website and mobile app were
+born in this era.
+
+### [V3 — PawMe](https://github.com/openpawrobotai/openpaw-v3) · Nov 2025 → today ⭐ current
+
+The pivot from sphere to a **two-wheeled desktop companion**: tilting head, expressive
+dot-matrix LED eyes, XIAO-ESP32S3, custom Top/Base/Display PCBs, laser, full sensor suite and
+a charging dock. The robot "came to life" in March 2026 — boot sequence with eye expressions,
+sounds and head tilt, plus a live web app with camera-following eyes. Red Dot Design Concept
+and A'Design Award submissions filed; patent in progress.
 
 ---
 
 <!-- REPOS -->
-## 📦 Repository Ecosystem
+## 📦 What's In Each Repo
 
-| Repository | Purpose | Status |
-|:---|:---|:---:|
-| [🧠 openpaw-firmware](https://github.com/openpawrobotai/openpaw-firmware) | ESP32 Firmware (OTA, gaits, sensors) | 🔄 Active |
-| [🔧 openpaw-hardware](https://github.com/openpawrobotai/openpaw-hardware) | PCB, CAD & Mechanical Design | 🔄 Active |
-| [⚽ openpaw-ballbot](https://github.com/openpawrobotai/openpaw-ballbot) | ESP32 Self-Balancing Ball Robot | 🔄 Active |
-| [🌐 openpaw-website](https://github.com/openpawrobotai/openpaw-website) | Website & Waitlist | 🔄 Active |
-| [🤖 openpaw-ml](https://github.com/openpawrobotai/openpaw-ml) | AI Models & Wellness Signals | ⏳ Planned |
-| [📚 openpaw-docs](https://github.com/openpawrobotai/openpaw-docs) | Documentation & Architecture | 🔄 Active |
-| [📢 openpaw-marketing](https://github.com/openpawrobotai/openpaw-marketing) | Build-In-Public Automation | 🔄 Active |
+| Repository | What It Contains |
+|:---|:---|
+| [🐾 main](https://github.com/openpawrobotai/main) | This overview — the story, branding & demo |
+| [⚪ openpaw-v1](https://github.com/openpawrobotai/openpaw-v1) | V1 ball-bot: ESP-ROLL schematic, PCB Gerbers, BOM, firmware snapshot, requirement docs & dev history |
+| [🔵 openpaw-v2](https://github.com/openpawrobotai/openpaw-v2) | V2 custom rolling robot: PCBA renders, project docs, ballbot architecture & research, ML knowledge, marketing automation & dev history |
+| [🟢 openpaw-v3](https://github.com/openpawrobotai/openpaw-v3) | V3 PawMe (current): final CAD (STEP + SolidWorks), board schematics & outlines, production firmware, eye-expression designer, CMF spec, renders & dev history |
+| [🌐 openpaw-website_v1](https://github.com/openpawrobotai/openpaw-website_v1) | The PawMe website (Next.js, deployed on Vercel) |
+
+---
+
+<!-- CREDITS -->
+## 🙏 Credits
+
+OpenPaw stands on the shoulders of the open-source community — and pays it forward:
+
+- **[Max Imagination](https://www.instructables.com/member/Max%20Imagination/)** — creator of
+  **[ESP-ROLL: Build a Spherical Self-balancing Robot With ESP32 Camera!](https://www.instructables.com/ESP-ROLL-Build-a-Spherical-Self-balancing-Robot-Wi/)**,
+  the open project (CC BY-NC-SA 4.0) that our V1 replicated and that started this whole journey. Thank you! ❤️
+- **[s60sc](https://github.com/s60sc)** — author of
+  [ESP32-CAM_MJPEG2SD](https://github.com/s60sc/ESP32-CAM_MJPEG2SD) (AGPL-3.0), the camera
+  firmware foundation used in V1.
 
 ---
 
@@ -269,16 +303,12 @@ Three generations of the robot, each with full design files (Mechanical / Electr
 ## 🚀 Quick Start
 
 ```bash
-# Clone the firmware repository
-git clone https://github.com/openpawrobotai/openpaw-firmware
-cd openpaw-firmware
+# Clone the current-generation robot (V3) with firmware, CAD & schematics
+git clone https://github.com/openpawrobotai/openpaw-v3
+cd openpaw-v3/Firmware/MAIN_CODE
 
-# Set target and build
-idf.py set-target esp32
-idf.py build
-
-# Flash to device and monitor
-idf.py flash monitor
+# Open in Arduino IDE / PlatformIO with an ESP32-S3 (XIAO) target,
+# or browse Mechanical/ and Electrical/ for the CAD & board files.
 ```
 
 ---
